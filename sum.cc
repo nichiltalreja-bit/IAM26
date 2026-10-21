@@ -11,5 +11,6 @@ std :: ofstream fout ("sums.txt");
 while(fin >> a >> b){
     fout << a+b << std :: endl;
 }
+
 fout.close();
 }
