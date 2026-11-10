@@ -1,7 +1,11 @@
 #include <vector>
 #include <iostream>
 #include <fstream>
+#include <cmath>
 
+double Poisson(double mu, int k){
+        return(std::pow(mu, k) * std::exp(-mu))/std::tgamma(k + 1);
+    }
 
 int main(){
     std::vector<int> counts(11);
@@ -21,5 +25,11 @@ int main(){
     for (unsigned int k = 0 ; k < counts.size(); ++ k ) {
     fout << k << " " << counts[k]<<std::endl;
     std::cout << k << " " << counts[k]<<std::endl;
+    }
+
+
+    std::ofstream fout2("histpoi.txt");
+    for (unsigned int k = 0 ; k < counts.size(); ++ k ) {
+    fout2 << k << " " << counts[k]<< " "<< n*Poisson(mean, k) <<std::endl;
     }
 }
