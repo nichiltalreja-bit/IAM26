@@ -19,7 +19,7 @@ int main(){
     std::cout << "Mean: " << mean << std :: endl;
     std::cout << "n: " << n << std :: endl;
     for (unsigned int k = 0 ; k < counts.size(); ++ k ) {
-    fout << k << ":" << counts[k]<<std::endl;
-    std::cout << k << ":" << counts[k]<<std::endl;
+    fout << k << " " << counts[k]<<std::endl;
+    std::cout << k << " " << counts[k]<<std::endl;
     }
 }
